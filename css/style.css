@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --c-primary: #E1E1E1;
+    --c-secondary: #343434;
+}
+
+@font-face {
+    font-family: Simplifica;
+    src: url("assets/simplifica.ttf");
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--c-primary);
+}
+
+header {
+    background-color: var(--c-secondary);
+    height: 128px;
+    width: 100%;
+    
+    /* Set font style/color */
+    font-family: Simplifica;
+    font-size: 72px;
+    color: var(--c-primary);
+    text-transform: uppercase;
+
+    /* Center Text Within Header */
+    text-align: center;
+    line-height:128px;
+}
+
+footer {
+    background-color: var(--c-primary);
+    width: 100%;
+    height: 36px;
+    
+    /* Set font style/color */
+    font-family: Simplifica;
+    font-size: 36px;
+    color: var(--c-secondary);
+    text-transform: uppercase;
+    line-height: 36px;
+
+    /* Center Text Within Header */
+    text-align: center;
+}
+
+.backtotop {
+    margin-top: 75px;
+}
+
+.darkmode {
+    background-color: var(--c-primary);
+    width: 100%;
+    height: 64px;
+    
+    /* Set font style/color */
+    font-family: Simplifica;
+    font-size: 36px;
+    color: var(--c-secondary);
+    text-transform: uppercase;
+    line-height: 64px;
+
+    /* Center Text Within Header */
+    text-align: center;
+
+    margin-bottom: 75px;
+}
+
+.copyright {
+    height: 48px;
+    font-size: 18px;
+    line-height: 48px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main-content {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+}
+
+.box {
+    display: inline-block;
+    height: 270px;
+    width: 480px;
+    text-align: center;
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    /* Set font style/color */
+    font-family: Simplifica;
+    font-size: 18px;
+    color: var(--c-secondary);
+    text-transform: uppercase;
+    line-height: 270px;
+
+    border: 1px solid var(--c-secondary);
+
+    background-color: var(--c-primary);
+}
