@@ -25,18 +25,32 @@ $(document).ready(function(){
 
     // Hovering website
     $('#websites').mouseover(function () {
-        $('#websites').animate({
-            width: '100%',
-            backgroundColor: '#343434'
-        }, 500);
+        if(!darkMode) {
+            $('#websites').animate({
+                width: '100%',
+                backgroundColor: '#343434'
+            }, 500);
+        } else if(darkMode) {
+            $('#websites').animate({
+                width: '100%',
+                backgroundColor: '#E1E1E1'
+            }, 500);
+        }
         return false;
     });
 
     $('#websites').mouseleave(function () {
-        $('#websites').animate({
-            width: '480px',
-            backgroundColor: '#E1E1E1'
-        }, 500);
+        if(!darkMode) {
+            $('#websites').animate({
+                width: '480px',
+                backgroundColor: '#E1E1E1'
+            }, 500);
+        } else if(darkMode) {
+            $('#websites').animate({
+                width: '480px',
+                backgroundColor: '#343434'
+            }, 500);
+        }
         return false;
     });
 
