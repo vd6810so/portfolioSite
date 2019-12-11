@@ -15,9 +15,17 @@ $(document).ready(function(){
         if(darkMode) {
             $(':root').css('--c-primary', '#343434');
             $(':root').css('--c-secondary', '#E1E1E1');
+            $('#websites, #games, #other').animate({
+                color: '#E1E1E1',
+                backgroundColor: '#343434'
+            }, 300);
         } else if(!darkMode) {
             $(':root').css('--c-primary', '#E1E1E1');
             $(':root').css('--c-secondary', '#343434');
+            $('#websites, #games, #other').animate({
+                color: '#343434',
+                backgroundColor: '#E1E1E1'
+            }, 300);
         }
 
         return false;
@@ -29,13 +37,18 @@ $(document).ready(function(){
             $('#websites').animate({
                 width: '100%',
                 backgroundColor: '#343434'
-            }, 500);
+            }, 300);
         } else if(darkMode) {
             $('#websites').animate({
                 width: '100%',
                 backgroundColor: '#E1E1E1'
-            }, 500);
+            }, 300);
         }
+
+        $('.glass#websites').css({
+            'filter': 'none'
+        });
+        $('span#websites').fadeOut();
         return false;
     });
 
@@ -44,44 +57,100 @@ $(document).ready(function(){
             $('#websites').animate({
                 width: '480px',
                 backgroundColor: '#E1E1E1'
-            }, 500);
+            }, 300);
         } else if(darkMode) {
             $('#websites').animate({
                 width: '480px',
                 backgroundColor: '#343434'
-            }, 500);
+            }, 300);
         }
+
+        $('.glass#websites').css({
+            'filter': 'blur(2px)'
+        });
+        $('span#websites').fadeIn();
         return false;
     });
 
     // Hovering games
     $('#games').mouseover(function () {
-        $('#games').animate({
-            width: '100%',
-        }, 500);
+        if(!darkMode) {
+            $('#games').animate({
+                width: '100%',
+                backgroundColor: '#343434'
+            }, 300);
+        } else if(darkMode) {
+            $('#games').animate({
+                width: '100%',
+                backgroundColor: '#E1E1E1'
+            }, 300);
+        }
+
+        $('.glass#games').css({
+            'filter': 'none'
+        });
+        $('span#games').fadeOut();
         return false;
     });
 
     $('#games').mouseleave(function () {
-        $('#games').animate({
-            width: '480px'
-        }, 500);
+        if(!darkMode) {
+            $('#games').animate({
+                width: '480px',
+                backgroundColor: '#E1E1E1'
+            }, 300);
+        } else if(darkMode) {
+            $('#games').animate({
+                width: '480px',
+                backgroundColor: '#343434'
+            }, 300);
+        }
+
+        $('.glass#games').css({
+            'filter': 'blur(2px)'
+        });
+        $('span#games').fadeIn();
         return false;
     });
 
-    // Hovering website
+    // Hovering other
     $('#other').mouseover(function () {
-        $('#other').animate({
-            width: '100%',
-        }, 500);
+        if(!darkMode) {
+            $('#other').animate({
+                width: '100%',
+                backgroundColor: '#343434'
+            }, 300);
+        } else if(darkMode) {
+            $('#other').animate({
+                width: '100%',
+                backgroundColor: '#E1E1E1'
+            }, 300);
+        }
+
+        $('.glass#other').css({
+            'filter': 'none'
+        });
+        $('span#other').fadeOut();
         return false;
     });
 
     $('#other').mouseleave(function () {
-        $('#other').animate({
-            width: '480px'
-        }, 500);
+        if(!darkMode) {
+            $('#other').animate({
+                width: '480px',
+                backgroundColor: '#E1E1E1'
+            }, 300);
+        } else if(darkMode) {
+            $('#other').animate({
+                width: '480px',
+                backgroundColor: '#343434'
+            }, 300);
+        }
+
+        $('.glass#other').css({
+            'filter': 'blur(2px)'
+        });
+        $('span#other').fadeIn();
         return false;
     });
-
 });

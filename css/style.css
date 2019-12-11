@@ -79,7 +79,7 @@ footer {
 }
 
 a {
-    color: inherit;
+    color: var(--c-secondary);
     text-decoration: none;
 }
 
@@ -107,5 +107,56 @@ a {
 
     border: 1px solid var(--c-secondary);
 
-    background-color: var(--c-primary);
+    position: relative; 
+}
+
+.glass {
+    width: 480px;
+    height: 270px;
+    position: absolute;
+    clip-path: inset(1px);
+    filter: blur(2px);
+}
+
+.glass#websites {
+    background: url("../assets/website_1.jpg");
+    background-size: cover; 
+}
+
+
+.glass#games {
+    background: url("../assets/game_1.png");
+    background-size: cover; 
+}
+
+.glass#other {
+    background: url("../assets/photo_1.jpg");
+    background-size: cover; 
+}
+
+span#websites {
+    display: inline-block;
+    position: relative;
+    color: #E1E1E1;
+    z-index: auto;
+}
+
+span#games {
+    display: inline-block;
+    position: relative;
+    color: #343434;
+    z-index: auto;
+}
+
+span#other {
+    display: inline-block;
+    position: relative;
+    color: #E1E1E1;
+    z-index: auto;
+}
+
+img {
+    height: 270px;
+    width: 480px;
+    position: absolute;
 }
